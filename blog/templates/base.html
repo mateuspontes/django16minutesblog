@@ -1,0 +1,21 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Blog 16 minutes</title>
+
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+  <header>
+    <h1>A 16 minutes Blog</h1>
+  </header>
+
+  {% block content %}{% endblock %}
+
+  <footer>
+    <a href="http://twitter.com/mateuspontes">@mateuspontes</a>
+  </footer>
+</body>
+</html>

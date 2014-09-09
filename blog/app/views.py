@@ -1,3 +1,6 @@
-from django.shortcuts import render
+from django.views import generic
+from . import models
 
-# Create your views here.
+class PostsIndex(generic.ListView):
+  queryset      = models.Post.objects.published()
+  paginate_by   = 10

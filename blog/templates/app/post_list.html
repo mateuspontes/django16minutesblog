@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load django_markdown %}
+
+{% block content %}
+
+<section id="posts">
+{% for post in object_list %}
+  <article class="post">
+    <h3>{{ post.title }}</h3>
+    <small>Publicado em {{ post.created_at }}</small>
+    <div class="content">
+      {{ post.text|markdown }}
+    </div>
+  </article>
+{% endfor %}
+</section>
+
+{% endblock %}
