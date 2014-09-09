@@ -49,6 +49,6 @@ USE_I18N = True
 USE_L10N = True
 USE_TZ = True
 
-# https://docs.djangoproject.com/en/1.7/howto/static-files/
-STATIC_URL = os.path.join(BASE_DIR, '/static/')
-TEMPLATE_URL = os.path.join(BASE_DIR, '/templates/')
+STATIC_URL = '/static/'
+TEMPLATE_DIRS = (os.path.join(BASE_DIR, 'templates'), )
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'), )
